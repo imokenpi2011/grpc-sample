@@ -1,0 +1,12 @@
+syntax = "proto3";
+package chat;
+
+// メッセージの中身を定義
+message Message {
+    string body = 1;
+}
+
+service ChatService {
+    // メソッドを定義
+    rpc SayHello(Message) returns (Message) {}
+}
