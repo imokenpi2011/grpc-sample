@@ -6,6 +6,9 @@ message Message {
     string body = 1;
 }
 
+// コード生成に必要
+option go_package="grpc-sample/chat";
+
 service ChatService {
     // メソッドを定義
     rpc SayHello(Message) returns (Message) {}
